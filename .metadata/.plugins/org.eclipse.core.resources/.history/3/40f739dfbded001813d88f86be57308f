@@ -1,0 +1,39 @@
+package ie.gmit.sw;
+
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
+public class DbServiceImpl extends UnicastRemoteObject implements DbService {
+	
+	private static final long serialVersionUID = 1L;
+
+	protected DbServiceImpl() throws RemoteException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String create(String s) throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void read() throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String update(String s) throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String delete(String s) throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

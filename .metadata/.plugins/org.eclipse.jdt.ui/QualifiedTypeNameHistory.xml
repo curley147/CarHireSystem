@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.rmi.server.UnicastRemoteObject"/>
+<fullyQualifiedTypeName name="ie.gmit.sw.DbService"/>
+<fullyQualifiedTypeName name="ie.gmit.sw.DbServiceImpl"/>
+<fullyQualifiedTypeName name="java.rmi.registry.LocateRegistry"/>
+<fullyQualifiedTypeName name="ie.gmit.sw.Car_Hire_REST.DbService"/>
+<fullyQualifiedTypeName name="java.rmi.Naming"/>
+</qualifiedTypeNameHistroy>
