@@ -7,6 +7,7 @@ import java.rmi.RemoteException;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
@@ -27,10 +28,11 @@ public class MyResource {
      */
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String getIt() throws RemoteException, MalformedURLException, NotBoundException {
+    @Path("/{num}")
+    public String getIt(@PathParam("num") String s) throws RemoteException, MalformedURLException, NotBoundException {
         DbService ds = (DbService) Naming.lookup("rmi://127.0.0.1:1099/dbService");
         ds.read();
-		return "Got it";
+		return s;
         		
     }
 }
