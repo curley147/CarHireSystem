@@ -6,7 +6,9 @@
 //
 
 
-package org.example.createorder;
+package ie.gmit.sw.Model;
+import java.io.Serializable;
+import java.util.Date;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -49,8 +51,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "numDays"
 })
 @XmlRootElement(name = "Order")
-public class Order {
+public class Order implements Serializable{
 
+	private static final long serialVersionUID = 1L;
     @XmlElement(required = true)
     protected String rentId;
     @XmlElement(required = true)
@@ -59,10 +62,23 @@ public class Order {
     protected String carReg;
     @XmlElement(required = true)
     @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar date;
+    protected Date date;
     protected int numDays;
 
-    /**
+    public Order() {
+		super();
+	}
+    
+    public Order(String rentId, String custId, String carReg, Date date, int numDays) {
+    	super();
+		this.rentId = rentId;
+		this.custId = custId;
+		this.carReg = carReg;
+		this.date = date;
+		this.numDays = numDays;
+	}
+
+	/**
      * Gets the value of the rentId property.
      * 
      * @return
@@ -142,7 +158,7 @@ public class Order {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public XMLGregorianCalendar getDate() {
+    public Date getDate() {
         return date;
     }
 
@@ -154,7 +170,7 @@ public class Order {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setDate(XMLGregorianCalendar value) {
+    public void setDate(Date value) {
         this.date = value;
     }
 

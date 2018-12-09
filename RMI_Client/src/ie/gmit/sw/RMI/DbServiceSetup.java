@@ -1,4 +1,4 @@
-package ie.gmit.sw.Car_Hire_REST;
+package ie.gmit.sw.RMI;
 
 import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
@@ -15,7 +15,7 @@ public class DbServiceSetup {
 		// Add/bind our remote object to the registry with the human-readable name databaseService
 		Naming.rebind("dbService", ds);
 		
-		System.out.println("Server Ready");
+		System.out.println("server ready for action");
 	}
  
 }

@@ -6,4 +6,4 @@
 //
 
 @javax.xml.bind.annotation.XmlSchema(namespace = "http://www.example.org/createOrder", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package org.example.createorder;
+package ie.gmit.sw.Model;

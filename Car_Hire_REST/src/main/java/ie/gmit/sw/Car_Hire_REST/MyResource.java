@@ -4,15 +4,17 @@ import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
+import java.sql.SQLException;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import ie.gmit.sw.RMI.DbService;
 
 /**
- * Root resource (exposed at "myresource" path)
+ * Root resource (exposed at "myResource" path)
  */
 @Path("myresource")
 public class MyResource {
@@ -25,11 +27,12 @@ public class MyResource {
      * @throws RemoteException 
      * @throws NotBoundException 
      * @throws MalformedURLException 
+     * @throws SQLException 
      */
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/{num}")
-    public String getIt(@PathParam("num") String s) throws RemoteException, MalformedURLException, NotBoundException {
+    public String getIt(@PathParam("num") String s) throws RemoteException, MalformedURLException, NotBoundException, SQLException {
         DbService ds = (DbService) Naming.lookup("rmi://127.0.0.1:1099/dbService");
         ds.read();
 		return s;

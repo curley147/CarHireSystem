@@ -8,6 +8,8 @@
 
 package ie.gmit.sw.Model;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -43,16 +45,32 @@ import javax.xml.bind.annotation.XmlType;
     "carModel"
 })
 @XmlRootElement(name = "Car")
-public class Car {
+public class Car implements Serializable {
 
-    @XmlElement(required = true)
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@XmlElement(required = true)
     protected String carReg;
     @XmlElement(required = true)
     protected String carMake;
     @XmlElement(required = true)
     protected String carModel;
 
-    /**
+    public Car() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+    
+    public Car(String carReg, String carMake, String carModel) {
+		super();
+		this.carReg = carReg;
+		this.carMake = carMake;
+		this.carModel = carModel;
+	}
+
+	/**
      * Gets the value of the carReg property.
      * 
      * @return

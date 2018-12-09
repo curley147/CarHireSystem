@@ -7,6 +7,7 @@
 
 
 package ie.gmit.sw.Model;
+import java.io.Serializable;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -42,13 +43,28 @@ import javax.xml.bind.annotation.XmlType;
     "licenseNo"
 })
 @XmlRootElement(name = "Customer")
-public class Customer {
+public class Customer implements Serializable {
 
-    @XmlElement(required = true)
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@XmlElement(required = true)
     protected String custId;
     @XmlElement(required = true)
     protected String name;
     protected int licenseNo;
+    
+    public Customer() {
+		super();
+	}
+    
+	public Customer(String custId, String name, int licenseNo) {
+		super();
+		this.custId = custId;
+		this.name = name;
+		this.licenseNo = licenseNo;
+	}
 
     /**
      * Gets the value of the custId property.

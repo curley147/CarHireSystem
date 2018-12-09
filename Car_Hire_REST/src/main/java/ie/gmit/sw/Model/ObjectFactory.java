@@ -6,8 +6,7 @@
 //
 
 
-package org.example.createorder;
-
+package ie.gmit.sw.Model;
 import javax.xml.bind.annotation.XmlRegistry;
 
 
