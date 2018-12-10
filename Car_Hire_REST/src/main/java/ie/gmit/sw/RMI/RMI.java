@@ -17,5 +17,9 @@ public class RMI {
 	public List<Order> readOrder() throws Exception {
 		return dbs.read();
 	}
+	//create order
+	public void createOrder(Order o) throws Exception {
+		dbs.create(o);
+	}
 
 }

@@ -10,12 +10,12 @@ import ie.gmit.sw.Model.Order;
 public interface DbService extends Remote {
 
 	// creates a booking 
-	public String create(String s) throws RemoteException;
+	public void create(Order o) throws RemoteException, SQLException;
 	//reads all the bookings 
-	//public void read() throws RemoteException;
 	public List<Order> read() throws RemoteException, SQLException;
 	//update a booking
-	public String update(String s) throws RemoteException;
+	public void update(Order o) throws RemoteException, SQLException;
 	//delete a booking 
-	public String delete(String s) throws RemoteException;
+	public String delete(Order o) throws RemoteException,SQLException;
+	
 }
