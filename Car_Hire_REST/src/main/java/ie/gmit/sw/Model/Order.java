@@ -42,13 +42,13 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
+@XmlType(name="", propOrder = {
 	"rentId",
     "custId",
     "carReg",
     "date"
 })
-@XmlRootElement(name = "Order")
+@XmlRootElement(name = "order")
 public class Order implements Serializable {
 
     /**

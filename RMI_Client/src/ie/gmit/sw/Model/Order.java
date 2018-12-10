@@ -48,7 +48,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "carReg",
     "date"
 })
-@XmlRootElement(name = "Order")
+@XmlRootElement(name = "order")
 public class Order implements Serializable {
 
     /**
